@@ -3,5 +3,5 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://192.168.101.213:27027/admin
+      uri: mongodb://192.168.101.42:27027/admin
       dbname: layoutfile_info

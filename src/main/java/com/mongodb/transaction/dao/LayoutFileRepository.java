@@ -1,5 +1,6 @@
 package com.mongodb.transaction.dao;
 
+import com.alibaba.fastjson.JSON;
 import com.mongodb.bulk.BulkWriteResult;
 import com.mongodb.client.ClientSession;
 import com.mongodb.client.MongoCollection;
@@ -31,7 +32,8 @@ public class LayoutFileRepository {
             if (log.isDebugEnabled()) {
                 log.info("bath insert:" + layoutFile.toString());
             }
-            InsertOneModel<LayoutFile> model = new InsertOneModel(layoutFiles);
+            Document document = Document.parse(JSON.toJSONString(layoutFile));
+            InsertOneModel<LayoutFile> model = new InsertOneModel(document);
             insertOneModels.add(model);
         }
         try {
