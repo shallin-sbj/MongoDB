@@ -42,11 +42,15 @@ public class BathController {
     /**
      * 批量更新
      *
-     * @param layoutFiles
+     * @param layoutFieMessage
      */
     @RequestMapping(value = "/bathupdate")
-    public String bathUpdate(List<LayoutFile> layoutFiles) {
-        boolean result = layoutFileService.bathUpdate(layoutFiles);
+    public String bathUpdate(@RequestBody LayoutFieMessage layoutFieMessage) {
+        List<LayoutFile> layoutFiles = layoutFieMessage.getLayoutFiles();
+        boolean result = false;
+        if (!CollectionUtils.isEmpty(layoutFiles)) {
+            result = layoutFileService.bathUpdate(layoutFiles);
+        }
         if (result) {
             return "ok";
         } else {
@@ -54,15 +58,18 @@ public class BathController {
         }
     }
 
-
     /**
      * 批量插入更新
      *
-     * @param layoutFiles
+     * @param layoutFieMessage
      */
     @RequestMapping(value = "/bathupsert")
-    public String bathInsertOrUpdate(List<LayoutFile> layoutFiles) {
-        boolean result = layoutFileService.bathInsertOrUpdate(layoutFiles);
+    public String bathInsertOrUpdate(@RequestBody LayoutFieMessage layoutFieMessage) {
+        List<LayoutFile> layoutFiles = layoutFieMessage.getLayoutFiles();
+        boolean result = false;
+        if (!CollectionUtils.isEmpty(layoutFiles)) {
+            result = layoutFileService.bathInsertOrUpdate(layoutFiles);
+        }
         if (result) {
             return "ok";
         } else {
