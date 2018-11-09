@@ -32,7 +32,7 @@ public class MongoDBConifg {
     public void init() {
         getLogger("org.mongodb.driver").setLevel(Level.SEVERE);
         CodecRegistry codecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(), fromProviders(
-                PojoCodecProvider.builder().register("com.mongodb.models").build()));
+                PojoCodecProvider.builder().register("com.mongodb.*").build()));
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
         MongoClientOptions.Builder options = new MongoClientOptions.Builder().codecRegistry(pojoCodecRegistry);
