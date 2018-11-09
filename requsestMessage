@@ -1,0 +1,46 @@
+{
+	"layoutFiles": [{
+			"fileId": "1234563",
+			"filepath": "/apps/layout",
+			"version": "001",
+			"type": "dss",
+			"entityType": "1",
+			"channel": "XYSELF",
+			"status": "1"
+		},
+		{
+			"fileId": "1234573",
+			"filepath": "/apps/layout",
+			"version": "001",
+			"type": "layout",
+			"channel": "XYSELF",
+			"entityType": "2",
+			"status": "1"
+		},
+		{
+			"fileId": "1234583",
+			"filepath": "/apps/layout",
+			"version": "001",
+			"type": "prepertis",
+			"channel": "XYSELF",
+			"entityType": "3",
+			"status": "1"
+		}, {
+			"fileId": "1234593",
+			"filepath": "/apps/layout",
+			"version": "001",
+			"type": "prepertis",
+			"entityType": "4",
+			"channel": "XYSELF",
+			"status": "1"
+		}, {
+			"fileId": "1234553",
+			"filepath": "/apps/layout",
+			"version": "001",
+			"type": "prepertis",
+			"channel": "XYSELF",
+			"entityType": "5",
+			"status": "1"
+		}
+	]
+}

@@ -1,0 +1,7 @@
+server:
+  port: 8080
+spring:
+  data:
+    mongodb:
+      uri: mongodb://192.168.101.213:27027/admin
+      dbname: layoutfile_info
